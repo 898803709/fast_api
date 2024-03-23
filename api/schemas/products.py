@@ -1,5 +1,7 @@
-from pydantic import BaseModel
 from typing import List
+
+from pydantic import BaseModel
+
 
 # iPhoneモデル
 class IPhone(BaseModel):
@@ -7,6 +9,7 @@ class IPhone(BaseModel):
     color: str
     storage_capacity_gb: int
     price: float
+
 
 # iPadモデル
 class IPad(BaseModel):
@@ -16,6 +19,7 @@ class IPad(BaseModel):
     storage_capacity_gb: int
     price: float
 
+
 # Macモデル
 class Mac(BaseModel):
     model: str
@@ -23,6 +27,7 @@ class Mac(BaseModel):
     color: str
     storage_capacity_gb: int
     price: float
+
 
 # Productモデル
 class Product(BaseModel):
