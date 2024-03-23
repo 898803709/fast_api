@@ -1,3 +1,21 @@
+[tool.black]
+line-length=120
+
+[tool.flake8]
+max-line-length=120
+ignore=""
+exclude=".venv/"
+
+[tool.isort]
+include_trailing_comma = true
+line_length = 120
+multi_line_output = 3
+use_parentheses = true
+
+[tool.mypy]
+install_types = true
+non_interactive = true
+
 [tool.poetry]
 name = "demo-app"
 version = "0.1.0"
