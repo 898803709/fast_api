@@ -4,7 +4,7 @@ line-length=120
 [tool.flake8]
 max-line-length=120
 ignore=""
-exclude=".venv/"
+exclude=[".venv/", ".dockervenv/"]
 
 [tool.isort]
 include_trailing_comma = true
@@ -29,9 +29,10 @@ fastapi = "^0.110.0"
 uvicorn = {extras = ["standard"], version = "^0.28.0"}
 black = "^24.3.0"
 pydantic = "^2.6.4"
-flake8 = "^7.0.0"
+flake8 = "6.1.0"
 ruff = "^0.3.4"
 mypy = "^1.9.0"
+pyproject-flake8 = "^6.1.0"
 
 
 [build-system]
