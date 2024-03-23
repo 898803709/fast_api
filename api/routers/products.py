@@ -1,7 +1,9 @@
 from typing import List
 
 from fastapi import APIRouter
-import api.schemas.products as products_schema 
+
+import api.schemas.products as products_schema
+
 router = APIRouter()
 
 
