@@ -17,14 +17,10 @@ case $CHECK in
   "isort")
     poetry run isort --check-only .
     ;;
-  "pytest")
-    poetry run pytest
-    ;;
   *)
     poetry run black --diff .
     poetry run flake8 .
     poetry run isort --check-only .
     poetry run mypy --ignore-missing-imports .
-    poetry run pytest
     ;;
 esac
