@@ -9,7 +9,7 @@ router = APIRouter()
 
 @router.get("/products", response_model=List[products_schema.Product])
 async def list_products():
-    return [products_schema.Product(id=1)]
+    pass
 
 
 @router.post("/products")
@@ -18,7 +18,7 @@ async def create_product():
 
 
 @router.put("/products/{product_id}")
-async def update_product(product_id: int):
+async def update_product():
     pass
 
 
