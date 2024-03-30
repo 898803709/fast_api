@@ -15,3 +15,8 @@ docker-compose run \
 ```
 docker-compose run --entrypoint "poetry install --no-root" demo-app
 ```
+
+## 環境を全て削除
+```
+docker-compose exec demo-app poetry env remove --all
+```
