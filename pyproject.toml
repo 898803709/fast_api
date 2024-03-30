@@ -28,11 +28,11 @@ python = "^3.9"
 fastapi = "^0.110.0"
 uvicorn = {extras = ["standard"], version = "^0.28.0"}
 black = "^24.3.0"
-pydantic = "^2.6.4"
 flake8 = "6.1.0"
 ruff = "^0.3.4"
 mypy = "^1.9.0"
 pyproject-flake8 = "^6.1.0"
+pydantic = "1.8.2"
 
 
 [build-system]
