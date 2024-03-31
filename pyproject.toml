@@ -36,6 +36,11 @@ pydantic = "^1.8.1"
 sqlalchemy = "^1.4.41"
 aiomysql = "^0.2.0"
 
+[tool.poetry.dev-dependencies]
+aiosqlite = "^0.17.0"
+pytest-asyncio = "^0.15.1"
+httpx = "^0.18.2"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
