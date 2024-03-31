@@ -3,7 +3,7 @@ import starlette.status
 from httpx import AsyncClient
 from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine
 from sqlalchemy.orm import sessionmaker
-
+from typing import AsyncGenerator
 from api.db import Base, get_db
 from api.main import app
 
@@ -11,7 +11,7 @@ ASYNC_DB_URL = "sqlite+aiosqlite:///:memory:"
 
 
 @pytest.fixture
-async def async_client() -> AsyncClient:
+async def async_client() -> AsyncGenerator:
     # Async用のengineとsessionを作成
     async_engine = create_async_engine(ASYNC_DB_URL, echo=True)
     async_session = sessionmaker(autocommit=False, autoflush=False, bind=async_engine, class_=AsyncSession)
