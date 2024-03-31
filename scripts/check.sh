@@ -12,14 +12,14 @@ case $CHECK in
     poetry run black --diff .
     ;;
   "flake8")
-    poetry run flake8 .
+    poetry run pflake8 .
     ;;
   "isort")
     poetry run isort --check-only .
     ;;
   *)
     poetry run black --diff .
-    poetry run flake8 .
+    poetry run pflake8 .
     poetry run isort --check-only .
     poetry run mypy --ignore-missing-imports .
     ;;
