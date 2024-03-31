@@ -1,9 +1,11 @@
+from typing import AsyncGenerator
+
 import pytest
 import starlette.status
 from httpx import AsyncClient
 from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine
 from sqlalchemy.orm import sessionmaker
-from typing import AsyncGenerator
+
 from api.db import Base, get_db
 from api.main import app
 
