@@ -17,6 +17,9 @@ skip = [".venv/", ".dockervenv/"]
 install_types = true
 non_interactive = true
 
+[tool.ruff]
+line-length = 120
+
 [tool.poetry]
 name = "demo-app"
 version = "0.1.0"

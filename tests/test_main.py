@@ -16,9 +16,7 @@ ASYNC_DB_URL = "sqlite+aiosqlite:///:memory:"
 async def async_client() -> AsyncGenerator:
     # Async用のengineとsessionを作成
     async_engine = create_async_engine(ASYNC_DB_URL, echo=True)
-    async_session = sessionmaker(
-        autocommit=False, autoflush=False, bind=async_engine, class_=AsyncSession
-    )
+    async_session = sessionmaker(autocommit=False, autoflush=False, bind=async_engine, class_=AsyncSession)
 
     # テスト用にオンメモリのSQLiteテーブルを初期化（関数ごとにリセット）
     async with async_engine.begin() as conn:
