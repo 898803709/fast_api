@@ -24,7 +24,7 @@ case $CHECK in
     echo "Pythonの型チェック中(mypy)..."
     poetry run mypy --ignore-missing-imports .
     ;;
-  *)
+  "all")
     echo "Pythonコードスタイルのチェック中(black)..."
     poetry run black --diff .
     echo "Pythonコードスタイルのチェック中(flake8)..."
