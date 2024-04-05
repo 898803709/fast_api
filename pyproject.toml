@@ -39,6 +39,7 @@ pyproject-flake8 = "^6.1.0"
 pydantic = "^1.8.1"
 sqlalchemy = "^1.4.41"
 aiomysql = "^0.2.0"
+isort = "^5.13.2"
 
 [tool.poetry.dev-dependencies]
 aiosqlite = "^0.17.0"
