@@ -1,8 +1,6 @@
-#!/bin/bash
+#!/bin/bash -eu
+# コードスタイルの自動修正を行います
 
-poetry run black .
-poetry run pflake8 .
-poetry run isort .
-poetry run mypy --ignore-missing-imports .
-poetry run ruff check .   # Lint all files in the current directory.
-poetry run ruff format .  # Format all files in the current directory.
+cd "$( dirname "$0" )"/..
+poetry run ruff check --fix-only api tests
+poetry run black api tests
